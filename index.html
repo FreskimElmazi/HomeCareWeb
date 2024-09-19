@@ -10,22 +10,61 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f8ff;
         }
 
         header {
-            background-color: #0066cc;
+            background-color: #004aad;
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header h1 {
             margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            background-color: #00337c;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            color: #f0f8ff;
         }
 
         main {
-            padding: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         section {
@@ -33,62 +72,72 @@
         }
 
         h2 {
-            color: #0066cc;
-        }
-
-        .description {
-            margin-bottom: 20px;
+            color: #004aad;
+            border-bottom: 2px solid #004aad;
+            padding-bottom: 10px;
         }
 
         .highlight {
             background-color: #f9f9f9;
-            padding: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact, .privacy {
+            background-color: #e9f5ff;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         footer {
-            background-color: #333;
+            background-color: #00337c;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .contact {
-            text-align: center;
+            padding: 20px;
             margin-top: 40px;
         }
 
-        .contact a {
-            color: #0066cc;
+        footer p {
+            margin: 0;
+        }
+
+        a {
+            color: #004aad;
             text-decoration: none;
         }
 
+        a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-
-            header, footer {
-                text-align: center;
-            }
-
-            main {
-                padding: 10px;
+            nav ul li {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Organized Youth Association - Home Care Services</h1>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#who-we-serve">Who We Serve</a></li>
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section class="description">
+        <section id="about" class="description">
             <h2>About the Service</h2>
             <p class="highlight">
                 The Organized Youth Association is a licensed provider of Home Care services, supporting elderly people over 65, individuals with disabilities, and those with reduced functional capacity. This service is designed to help meet the daily needs of these individuals, improving their quality of life and preventing or delaying the need for institutional care.
@@ -98,7 +147,7 @@
             </p>
         </section>
 
-        <section>
+        <section id="who-we-serve">
             <h2>Who We Serve</h2>
             <ul>
                 <li>Elderly individuals over the age of 65.</li>
@@ -108,23 +157,37 @@
             <p>Our 20 trained, professional, and certified caregivers are here to assist.</p>
         </section>
 
-        <section>
+        <section id="mission">
             <h2>Our Mission</h2>
             <p>
                 Our goal is to improve the quality of life for elderly and disabled individuals in the local community by providing essential support for their daily activities, ensuring their independence, and reducing the need for institutional care.
             </p>
         </section>
 
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <p>For more information, reach out to us at:</p>
             <p>Email: <a href="mailto:homecaremacedonia@gmail.com">homecaremacedonia@gmail.com</a></p>
-            <p>Phone: +489 72 525 919</p>
+            <p>Phone: +389 72 525 919</p>
+        </section>
+
+        <section id="privacy" class="privacy">
+            <h2>Privacy Policy</h2>
+            <p>
+                The Organized Youth Association respects the privacy of our users and ensures that all personal information is handled in accordance with applicable laws and regulations.
+            </p>
+            <p>
+                We collect personal information solely for the purpose of providing home care services, and we ensure that all data is securely stored. We do not share user data with third parties without explicit consent.
+            </p>
+            <p>
+                Users can contact us at any time to inquire about their personal information, request corrections, or ask for data deletion. Our goal is to provide a safe, secure, and trustworthy service.
+            </p>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Organized Youth Association. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
